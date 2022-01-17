@@ -1,9 +1,3 @@
-{{admon/important | Comments and Explanations | The page source contains comments providing guidance to fill out each section. They are invisible when viewing this page. To read it, choose the "view source" link.<br/> '''Copy the source to a ''new page'' before making changes!  DO NOT EDIT THIS TEMPLATE FOR YOUR CHANGE PROPOSAL.'''}}
-
-{{admon/tip | Guidance | For details on how to fill out this form, see the [https://docs.fedoraproject.org/en-US/program_management/changes_guide/ documentation].}}
-
-<!-- The actual name of your proposed change page should look something like: Changes/Your_Change_Proposal_Name.  This keeps all change proposals in the same namespace -->
-
 = Change Proposal Name <!-- The name of your change proposal --> =
 
 == Summary ==
