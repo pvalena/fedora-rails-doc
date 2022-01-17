@@ -4,8 +4,8 @@
 Ruby on Rails 7.0 is the latest version of well known web framework written in Ruby.
 
 == Owner ==
-* Name: [[User:pvalena| Pavel Valena]], [[User:vondruch| Vít Ondruch]], [[User:jprokop| Jarek Prokop]]
-* Email: pvalena@redhat.com, vondruch@redhat.com, jprokop@redhat.com, ruby-sig@lists.fedoraproject.org
+* Name: [[User:pvalena| Pavel Valena]], [[User:jprokop| Jarek Prokop]]
+* Email: pvalena@redhat.com, jprokop@redhat.com, ruby-sig@lists.fedoraproject.org
 
 == Current status ==
 [[Category:ChangePageIncomplete]]
@@ -24,7 +24,7 @@ Ruby on Rails 7.0 is the latest version of well known web framework written in R
 The Ruby on Rails stack is evolving quickly and Fedora needs to keep pace with it. Therefore the whole Ruby on Rails stack should be updated from 6.1 in Fedora 35 to 7.0 (latest version) in Fedora 36. This will ensure that all the Ruby developers using Fedora have the latest and greatest RPM-packaged Ruby on Rails.
 
 == Benefit to Fedora ==
-This update will keep Fedora up-to-date and will ensure that the current Ruby on Rails developers stay with us as they will get support for system-packaged Ruby on Rails of the latest version. Update to Rails 7.0 contains hundreds of fixes and improvements across all the frameworks. For new features, please see 'User Experience'.
+This update will keep Fedora up-to-date and will ensure that the current Ruby on Rails developers stay with us as they will get support for system-packaged Ruby on Rails of the latest version. Update to Rails 7.0 contains hundreds of fixes and improvements across all the frameworks. For new features, please see [#User_Experience User Experience].
 
 == Scope ==
 * Proposal owners:
@@ -33,8 +33,8 @@ This update will keep Fedora up-to-date and will ensure that the current Ruby on
 
 === Packages need to be created/updated ===
 
-* Bug: [https://bugzilla.redhat.com/show_bug.cgi?id=2032639 #2032639]
-
+* Rails bug: [https://bugzilla.redhat.com/show_bug.cgi?id=2032639 #2032639]
+** Specific changes:
 {|
 ! Package name
 ! Task
@@ -101,8 +101,8 @@ This update will keep Fedora up-to-date and will ensure that the current Ruby on
 |[https://github.com/fedora-distgit/rubygem-importmap-rails prepared git changes]
 |}
 
-Current development state can be observed in [https://copr.fedorainfracloud.org/coprs/pvalena/ruby-on-rails/ pvalena/ruby-on-rails] COPR repository.
-Current status: **version 7.0.0** built and tested
+* Current development state can be observed in [https://copr.fedorainfracloud.org/coprs/pvalena/ruby-on-rails/ pvalena/ruby-on-rails] COPR repository.
+** Current status: '''version 7.0.0''' built and tested
 
 * Other developers: Update Rails dependent packages to be working with Ruby on Rails 7.0
 * Policies and guidelines: N/A (not a System Wide Change)
@@ -114,7 +114,9 @@ http://guides.rubyonrails.org/upgrading_ruby_on_rails.html
 
 == How To Test ==
 * No special hardware is needed.
-* Some manual adjustments to dependencies are needed ([??? example]).
+* Some additional adjustments to dependencies are needed to start the default app. Example:
+** https://github.com/pvalena/theprototype/blob/main/rails/test.sh
+
 
 === To test only Rails itself ===
 <pre>
@@ -152,13 +154,13 @@ rails s
 
 == Contingency Plan ==
 * Contingency mechanism: None needed. Rails stack won't be updated until all its dependencies are in Rawhide. After that, it will be a simple matter of updating the core packages (and their dependencies) via side-tag.
-* Contingency deadline: N/A (not a System Wide Change)  <!-- REQUIRED FOR SYSTEM WIDE CHANGES -->
-* Blocks release? No <!-- REQUIRED FOR SYSTEM WIDE CHANGES -->
-* Blocks product? No <!-- Applicable for Changes that blocks specific product release/Fedora.next -->
+* Contingency deadline: N/A (not a System Wide Change)
+* Blocks release? No
+* Blocks product? No
 
 == Documentation ==
 * http://api.rubyonrails.org/
 
 == Release Notes ==
-https://rubyonrails.org/2021/12/15/Rails-7-fulfilling-a-vision
-https://edgeguides.rubyonrails.org/7_0_release_notes.html
+* https://rubyonrails.org/2021/12/15/Rails-7-fulfilling-a-vision
+* https://edgeguides.rubyonrails.org/7_0_release_notes.html
